@@ -11,18 +11,38 @@ struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        Text(viewModel.text)
-            .padding()
+        switch viewModel.state {
+        case .initial:
+            Text(viewModel.text)
+                .padding()
+        case .loading:
+            EmptyView()
+        case .finish:
+            EmptyView()
+        case .error:
+            EmptyView()
+        }
     }
 }
 
 extension ContentView {
     class ViewModel: ObservableObject {
+        @Published var state: State
+
         let text: String
 
         init(text: String) {
             self.text = text
         }
+    }
+}
+
+extension ContentView.ViewModel {
+    enum State: Equatable {
+        case initial
+        case finish
+        case loading
+        case error
     }
 }
 

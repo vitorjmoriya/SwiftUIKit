@@ -18,6 +18,8 @@ class MainController: UIHostingController<ContentView> {
         self.viewModel = viewModel
 
         super.init(rootView: view)
+
+        self.viewModel.state = .initial
     }
 
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
