@@ -1,5 +1,5 @@
 //
-//  SwiftUIKitApp.swift
+//  AppDelegate.swift
 //  SwiftUIKit
 //
 //  Created by Vitor Moriya on 24/08/22.
@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-@main
-struct SwiftUIKitApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        return true
     }
 }
