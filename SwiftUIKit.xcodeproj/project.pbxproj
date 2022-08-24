@@ -13,6 +13,7 @@
 		5F23E43D28B64EAA003CC6CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F23E43C28B64EAA003CC6CC /* Preview Assets.xcassets */; };
 		5F23E44428B64F00003CC6CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E44328B64F00003CC6CC /* SceneDelegate.swift */; };
 		5F23E44628B64F18003CC6CC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E44528B64F18003CC6CC /* MainController.swift */; };
+		5F23E44E28B66590003CC6CC /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E44D28B66590003CC6CC /* CatFact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5F23E44328B64F00003CC6CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F23E44528B64F18003CC6CC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		5F23E44728B64F71003CC6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5F23E44D28B66590003CC6CC /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		5F23E43428B64EA9003CC6CC /* SwiftUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5F23E44C28B663FB003CC6CC /* Model */,
 				5F23E44728B64F71003CC6CC /* Info.plist */,
 				5F23E44528B64F18003CC6CC /* MainController.swift */,
 				5F23E44328B64F00003CC6CC /* SceneDelegate.swift */,
@@ -73,6 +76,14 @@
 				5F23E43C28B64EAA003CC6CC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F23E44C28B663FB003CC6CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F23E44D28B66590003CC6CC /* CatFact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				5F23E44628B64F18003CC6CC /* MainController.swift in Sources */,
 				5F23E43828B64EA9003CC6CC /* ContentView.swift in Sources */,
 				5F23E43628B64EA9003CC6CC /* SwiftUIKitApp.swift in Sources */,
+				5F23E44E28B66590003CC6CC /* CatFact.swift in Sources */,
 				5F23E44428B64F00003CC6CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,8 @@ struct ContentView: View {
                 .padding()
         case .loading:
             EmptyView()
-        case .finish:
-            EmptyView()
+        case .finish(let fact):
+            Text(fact.data.first!)
         case .error:
             EmptyView()
         }
@@ -27,7 +27,7 @@ struct ContentView: View {
 
 extension ContentView {
     class ViewModel: ObservableObject {
-        @Published var state: State
+        @Published var state: State = .initial
 
         let text: String
 
@@ -40,7 +40,7 @@ extension ContentView {
 extension ContentView.ViewModel {
     enum State: Equatable {
         case initial
-        case finish
+        case finish(CatFact)
         case loading
         case error
     }

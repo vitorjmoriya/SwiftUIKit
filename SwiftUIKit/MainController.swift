@@ -20,6 +20,18 @@ class MainController: UIHostingController<ContentView> {
         super.init(rootView: view)
 
         self.viewModel.state = .initial
+
+        Task { [weak self] in
+            do {
+                guard let self = self else { return }
+                self.viewModel.state = .loading
+                let data = try await URLSession.shared.data(from: .init(string:     "https://meowfacts.herokuapp.com/?count=3")!)
+                let facts = try JSONDecoder().decode(CatFact.self, from: data.0)
+                self.viewModel.state = .finish(facts)
+            } catch {
+                print(error)
+            }
+        }
     }
 
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
