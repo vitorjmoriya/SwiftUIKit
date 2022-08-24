@@ -11,6 +11,7 @@
 		5F23E43828B64EA9003CC6CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E43728B64EA9003CC6CC /* ContentView.swift */; };
 		5F23E43A28B64EAA003CC6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F23E43928B64EAA003CC6CC /* Assets.xcassets */; };
 		5F23E43D28B64EAA003CC6CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F23E43C28B64EAA003CC6CC /* Preview Assets.xcassets */; };
+		5F23E44628B64F18003CC6CC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E44528B64F18003CC6CC /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5F23E43728B64EA9003CC6CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5F23E43928B64EAA003CC6CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F23E43C28B64EAA003CC6CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F23E44528B64F18003CC6CC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		5F23E43428B64EA9003CC6CC /* SwiftUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5F23E44528B64F18003CC6CC /* MainController.swift */,
 				5F23E43528B64EA9003CC6CC /* SwiftUIKitApp.swift */,
 				5F23E43728B64EA9003CC6CC /* ContentView.swift */,
 				5F23E43928B64EAA003CC6CC /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F23E44628B64F18003CC6CC /* MainController.swift in Sources */,
 				5F23E43828B64EA9003CC6CC /* ContentView.swift in Sources */,
 				5F23E43628B64EA9003CC6CC /* SwiftUIKitApp.swift in Sources */,
 			);
