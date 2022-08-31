@@ -8,14 +8,8 @@
 import SwiftUI
 class MainController: UIHostingController<ContentView> {
 
-    let viewModel: ContentView.ViewModel
-
     init() {
-        let viewModel: ContentView.ViewModel = .init(text: "Hello world")
-
-        let view = ContentView(viewModel: viewModel)
-
-        self.viewModel = viewModel
+        let view = ContentView()
 
         super.init(rootView: view)
     }

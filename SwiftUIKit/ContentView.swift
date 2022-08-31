@@ -8,26 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel: ViewModel
+    @State private var name = ""
 
     var body: some View {
-        Text(viewModel.text)
-            .padding()
-    }
-}
-
-extension ContentView {
-    class ViewModel: ObservableObject {
-        let text: String
-
-        init(text: String) {
-            self.text = text
+        Form {
+            TextField("Enter your name", text: $name)
+            Text("Your name is \(name)")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: .init(text: "Hello World"))
+        ContentView()
     }
 }
