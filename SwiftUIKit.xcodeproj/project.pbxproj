@@ -13,6 +13,7 @@
 		5F23E43D28B64EAA003CC6CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F23E43C28B64EAA003CC6CC /* Preview Assets.xcassets */; };
 		5F23E44428B64F00003CC6CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E44328B64F00003CC6CC /* SceneDelegate.swift */; };
 		5F23E44628B64F18003CC6CC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E44528B64F18003CC6CC /* MainController.swift */; };
+		5F41C3BD28BF926E007C416E /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 5F41C3BC28BF926E007C416E /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F41C3BD28BF926E007C416E /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,9 @@
 			dependencies = (
 			);
 			name = SwiftUIKit;
+			packageProductDependencies = (
+				5F41C3BC28BF926E007C416E /* Introspect */,
+			);
 			productName = SwiftUIKit;
 			productReference = 5F23E43228B64EA9003CC6CC /* SwiftUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 5F23E42928B64EA9003CC6CC;
+			packageReferences = (
+				5F41C3BB28BF926E007C416E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 5F23E43328B64EA9003CC6CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F41C3BB28BF926E007C416E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F41C3BC28BF926E007C416E /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F41C3BB28BF926E007C416E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F23E42A28B64EA9003CC6CC /* Project object */;
 }
