@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Combine
+
 class MainController: UIHostingController<ContentView>, UITableViewDelegate {
 
     let viewModel: ContentView.ViewModel
+
+    var cancellable: AnyCancellable? = nil
 
     init() {
         let viewModel: ContentView.ViewModel = .init()
@@ -18,6 +22,10 @@ class MainController: UIHostingController<ContentView>, UITableViewDelegate {
         super.init(rootView: .init(viewModel: viewModel))
 
         viewModel.tableDelegate = self
+
+        cancellable = viewModel.$name.debounce(for: 0.3, scheduler: DispatchQueue.main).sink { name in
+            print(name)
+        }
     }
 
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
