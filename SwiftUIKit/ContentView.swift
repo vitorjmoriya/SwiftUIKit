@@ -15,6 +15,7 @@ struct ContentView: View {
         Form {
             TextField("Enter your name", text: $viewModel.name)
             Text("Your name is \(viewModel.name)")
+                .foregroundColor(viewModel.color)
         }
         .introspectTableView { tableView in
             tableView.delegate = viewModel.tableDelegate
@@ -27,6 +28,7 @@ extension ContentView {
         var tableDelegate: UITableViewDelegate?
 
         @Published var name: String = ""
+        @Published var color: Color = .black
     }
 }
 

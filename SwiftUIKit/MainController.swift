@@ -25,6 +25,9 @@ class MainController: UIHostingController<ContentView>, UITableViewDelegate {
 
         cancellable = viewModel.$name.debounce(for: 0.3, scheduler: DispatchQueue.main).sink { name in
             print(name)
+            if name.lowercased() == "blue" {
+                self.viewModel.color = .blue
+            }
         }
     }
 
