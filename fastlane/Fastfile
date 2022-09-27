@@ -32,4 +32,13 @@ platform :ios do
       clean: false
     )
   end
+
+  lane :test do
+    scan(
+      project: "SwiftUIKit.xcodeproj",
+      devices: ["iPhone 12"],
+      scheme: "SwiftUIKit",
+      clean: false
+    )
+  end
 end

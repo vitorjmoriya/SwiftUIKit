@@ -14,6 +14,7 @@ struct ContentView: View {
         switch viewModel.state {
         case .initial:
             Text(viewModel.text)
+                .foregroundColor(.red)
                 .padding()
         case .loading:
             EmptyView()
@@ -46,8 +47,8 @@ extension ContentView.ViewModel {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+public struct ContentView_Previews: PreviewProvider {
+    public static var previews: some View {
         ContentView(viewModel: .init(text: "Hello World"))
     }
 }

@@ -3,3 +3,6 @@ lint:
 
 build:
 	bundle exec fastlane build
+
+test:
+	bundle exec fastlane test
