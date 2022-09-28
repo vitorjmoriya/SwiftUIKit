@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: macos-12
+    steps:
+      - name: "Checkout to the repo"
+        uses: actions/checkout@v3
+
+      - name: "Setup XCode"
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '14.0.1'
+
+      - name: "Install dependency"
+        run: make install
+
+      - name: "Lint code using SwiftLint"
+        run: swiftlint lint --reporter github-actions-logging
+
+      - name: "Build and test"
+        run: make test

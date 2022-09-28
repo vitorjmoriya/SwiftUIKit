@@ -29,7 +29,8 @@ platform :ios do
       skip_archive: true,
       skip_codesigning: true,
       silent: false,
-      clean: false
+      clean: false,
+      disable_package_automatic_updates: true
     )
   end
 
@@ -38,7 +39,8 @@ platform :ios do
       project: "SwiftUIKit.xcodeproj",
       devices: ["iPhone 12"],
       scheme: "SwiftUIKit",
-      clean: false
+      clean: false,
+      disable_package_automatic_updates: true
     )
   end
 end
