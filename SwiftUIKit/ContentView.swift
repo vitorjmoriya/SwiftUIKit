@@ -14,12 +14,19 @@ struct ContentView: View {
         switch viewModel.state {
         case .initial:
             Text(viewModel.text)
-                .foregroundColor(.red)
-                .padding()
         case .loading:
             EmptyView()
-        case .finish(let fact):
-            Text(fact.data.first!)
+        case .finish(let facts):
+            VStack {
+                ForEach(facts.data, id: \.self) { fact in
+                    Text(fact)
+                        .foregroundColor(.red)
+                        .padding()
+                        .onTapGesture {
+                            viewModel.onTapText?(fact)
+                        }
+                }
+            }
         case .error:
             EmptyView()
         }
@@ -29,6 +36,8 @@ struct ContentView: View {
 extension ContentView {
     class ViewModel: ObservableObject {
         @Published var state: State = .initial
+
+        var onTapText: ((String) -> Void)?
 
         let text: String
 

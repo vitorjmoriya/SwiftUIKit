@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F22D69328E50DFB009682CA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22D69228E50DFB009682CA /* MainCoordinator.swift */; };
+		5F22D69528E512F4009682CA /* CatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22D69428E512F4009682CA /* CatDetailView.swift */; };
+		5F22D69728E5132D009682CA /* CatDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22D69628E5132D009682CA /* CatDetailController.swift */; };
 		5F23E43628B64EA9003CC6CC /* SwiftUIKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E43528B64EA9003CC6CC /* SwiftUIKitApp.swift */; };
 		5F23E43828B64EA9003CC6CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F23E43728B64EA9003CC6CC /* ContentView.swift */; };
 		5F23E43A28B64EAA003CC6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F23E43928B64EAA003CC6CC /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F22D69228E50DFB009682CA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5F22D69428E512F4009682CA /* CatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailView.swift; sourceTree = "<group>"; };
+		5F22D69628E5132D009682CA /* CatDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailController.swift; sourceTree = "<group>"; };
 		5F23E43228B64EA9003CC6CC /* SwiftUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F23E43528B64EA9003CC6CC /* SwiftUIKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIKitApp.swift; sourceTree = "<group>"; };
 		5F23E43728B64EA9003CC6CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		5F23E43428B64EA9003CC6CC /* SwiftUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5F22D69628E5132D009682CA /* CatDetailController.swift */,
 				5F23E44C28B663FB003CC6CC /* Model */,
 				5F23E44728B64F71003CC6CC /* Info.plist */,
 				5F23E44528B64F18003CC6CC /* MainController.swift */,
@@ -90,6 +97,8 @@
 				5F23E43728B64EA9003CC6CC /* ContentView.swift */,
 				5F23E43928B64EAA003CC6CC /* Assets.xcassets */,
 				5F23E43B28B64EAA003CC6CC /* Preview Content */,
+				5F22D69228E50DFB009682CA /* MainCoordinator.swift */,
+				5F22D69428E512F4009682CA /* CatDetailView.swift */,
 			);
 			path = SwiftUIKit;
 			sourceTree = "<group>";
@@ -235,9 +244,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F23E44628B64F18003CC6CC /* MainController.swift in Sources */,
+				5F22D69328E50DFB009682CA /* MainCoordinator.swift in Sources */,
 				5F23E43828B64EA9003CC6CC /* ContentView.swift in Sources */,
+				5F22D69728E5132D009682CA /* CatDetailController.swift in Sources */,
 				5F23E43628B64EA9003CC6CC /* SwiftUIKitApp.swift in Sources */,
 				5F23E44E28B66590003CC6CC /* CatFact.swift in Sources */,
+				5F22D69528E512F4009682CA /* CatDetailView.swift in Sources */,
 				5F23E44428B64F00003CC6CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
