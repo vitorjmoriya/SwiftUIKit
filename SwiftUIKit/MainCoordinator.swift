@@ -13,7 +13,7 @@ class MainCoordinator {
     }
 
     func navigateToCatDetails(detail: String) {
-        let catDetailController = CatDetailController(catDetail: detail)
+        let catDetailController = CatDetailController(coordinator: self, catDetail: detail)
         self.rootNavigationController.pushViewController(catDetailController, animated: false)
     }
 }

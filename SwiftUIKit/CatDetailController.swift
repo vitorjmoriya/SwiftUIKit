@@ -2,8 +2,16 @@ import SwiftUI
 
 class CatDetailController: UIHostingController<CatDetail> {
 
-    init(catDetail: String) {
-        super.init(rootView: .init(detail: catDetail))
+    let coordinator: MainCoordinator
+
+    init(coordinator: MainCoordinator, catDetail: String) {
+        self.coordinator = coordinator
+
+        let onTapCatFact: (() -> Void) = {
+            coordinator.navigateToCatDetails(detail: "We must go deeper")
+        }
+
+        super.init(rootView: .init(detail: catDetail, onTapFact: onTapCatFact))
     }
 
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
