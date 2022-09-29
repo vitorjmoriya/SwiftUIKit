@@ -5,11 +5,20 @@ struct CatDetail: View {
 
     var onTapFact: (() -> Void)?
 
+    var onTapGoBack: (() -> Void)?
+
     var body: some View {
-        Text(detail)
-            .onTapGesture {
-                onTapFact?()
-            }
+        VStack(spacing: 32) {
+            Text(detail)
+                .onTapGesture {
+                    onTapFact?()
+                }
+            Text("OK, GO BACK")
+                .onTapGesture {
+                    onTapGoBack?()
+                }
+                .foregroundColor(.green)
+        }
     }
 }
 

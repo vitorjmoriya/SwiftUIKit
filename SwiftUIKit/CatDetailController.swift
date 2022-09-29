@@ -11,7 +11,11 @@ class CatDetailController: UIHostingController<CatDetail> {
             coordinator.navigateToCatDetails(detail: "We must go deeper")
         }
 
-        super.init(rootView: .init(detail: catDetail, onTapFact: onTapCatFact))
+        super.init(rootView: .init(
+            detail: catDetail,
+            onTapFact: onTapCatFact,
+            onTapGoBack: { coordinator.rootNavigationController.popToRootViewController(animated: true) }
+        ))
     }
 
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
