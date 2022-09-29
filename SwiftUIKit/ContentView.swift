@@ -18,12 +18,12 @@ struct ContentView: View {
             EmptyView()
         case .finish(let facts):
             VStack {
-                ForEach(facts.data, id: \.self) { fact in
+                ForEach(Array(facts.data.enumerated()), id: \.offset) { index, fact in
                     Text(fact)
                         .foregroundColor(.red)
                         .padding()
                         .onTapGesture {
-                            viewModel.onTapText?(fact)
+                            viewModel.onTapText?(index, fact)
                         }
                 }
             }
@@ -37,7 +37,7 @@ extension ContentView {
     class ViewModel: ObservableObject {
         @Published var state: State = .initial
 
-        var onTapText: ((String) -> Void)?
+        var onTapText: ((Int, String) -> Void)?
 
         let text: String
 

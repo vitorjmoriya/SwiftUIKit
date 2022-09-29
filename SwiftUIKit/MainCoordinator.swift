@@ -16,4 +16,27 @@ class MainCoordinator {
         let catDetailController = CatDetailController(coordinator: self, catDetail: detail)
         self.rootNavigationController.pushViewController(catDetailController, animated: false)
     }
+
+    func navigateTo(route: Routes) {
+        switch route {
+        case .red:
+            let controller: UIHostingController = .init(rootView: Color.red)
+            self.rootNavigationController.pushViewController(controller, animated: false)
+        case .blue:
+            let controller: UIHostingController = .init(rootView: Color.blue)
+            self.rootNavigationController.pushViewController(controller, animated: false)
+        case .purple:
+            let controller: UIHostingController = .init(rootView: Color.purple)
+            self.rootNavigationController.pushViewController(controller, animated: false)
+        case .normal(let detail):
+            navigateToCatDetails(detail: detail)
+        }
+    }
+
+    enum Routes {
+        case red
+        case blue
+        case purple
+        case normal(String)
+    }
 }
